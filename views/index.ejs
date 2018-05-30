@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title> Note Taking App </title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <h2> Note Taking App </h2>
+    <form action ="/addNote" method="POST">
+        <input type="text" name="newnote" placeholder="add a new note">
+        <button>Save Note </button>
+
+
+        <h2> Saved Notes </h2>
+
+        <% for( var i = 0; i < notes.length; i++){ %>
+        <li><input type="checkbox" name="check" value="<%= notes[i] %>" /> <%= notes[i] %> </li>
+        <% } %>
+
+        <button formaction="/removeNote" type="submit" id="top"> Delete Note </button>
+    </form>
+
+</div>
+</body>
+</html>

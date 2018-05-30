@@ -1,0 +1,126 @@
+html, body {
+  box-siding: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+header {
+  background: teal;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+header h1 {
+  margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  line-height: 16px;
+  margin: 0 0 .5em;
+}
+button.delete {
+  color: #b31014;
+  background: none;
+  font-size: 24px;
+}
+button.delete:hover {
+  color: #840f11;
+}
+button.txt-btn {
+  font-size: 12px;
+  text-transform: uppercase;
+  border: solid 1px #fff;
+  padding: 3px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+button.add-note {
+  background: transparent;
+}
+button.add-note:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.button-group {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.button-container {
+  display: flex;
+}
+
+select {
+  width: 100%;
+  margin: 0 0 .5em;
+}
+
+.note {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.note .button-group.active {
+  display: none;
+}
+.note.bg-green {
+  background: #B3FFC0;
+}
+.note.bg-blue {
+  background: #B3E8FF;
+}
+.note.bg-yellow {
+  background: #FFFFA5;
+}
+.note.in-edit {
+  z-index: 1000;
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+  background-color: #ededed;
+}
+.note.in-edit.no-shadow {
+  box-shadow: none;
+}
+.note.in-edit .button-group.inactive {
+  display: none;
+}
+.note.in-edit .button-group.active {
+  display: block;
+}
+.note.in-edit textarea {
+  height: 70%;
+  visibility: visible;
+  border: dashed 2px #fff;
+}
+.note.in-edit p {
+  height: 0px;
+  visibility: hidden;
+}
+.note label {
+  font-size: 9px;
+  text-align: center;
+}
+.note textarea {
+  border: none;
+  background: none;
+  outline: 0;
+  resize: none;
+  padding: 10px;
+  width: 90%;
+}
+
+.note-content {
+  padding: 10px;
+  width: 80%;
+}
+
+#notes h1 {
+  text-align: center;
+}
